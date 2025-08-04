@@ -495,24 +495,9 @@ func DefaultRawConfig() *RawConfig {
 			FakeIPRange:    "198.18.0.1/16",
 			FallbackFilter: RawFallbackFilter{
 				GeoIP:     true,
-				GeoIPCode: "CN",
+				GeoIPCode: "",
 				IPCIDR:    []string{},
 				GeoSite:   []string{},
-			},
-			DefaultNameserver: []string{
-				"114.114.114.114",
-				"223.5.5.5",
-				"8.8.8.8",
-				"1.0.0.1",
-			},
-			NameServer: []string{
-				"https://doh.pub/dns-query",
-				"tls://223.5.5.5:853",
-			},
-			FakeIPFilter: []string{
-				"dns.msftnsci.com",
-				"www.msftnsci.com",
-				"www.msftconnecttest.com",
 			},
 			FakeIPFilterMode: C.FilterBlackList,
 		},
